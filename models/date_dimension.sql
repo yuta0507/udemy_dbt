@@ -1,4 +1,4 @@
-WITH CTE AS (
+WITH date_dimension AS (
     SELECT
         TO_TIMESTAMP(STARTED_AT),
         DATE(TO_TIMESTAMP(STARTED_AT)) AS DATE_STARTED_AT,
@@ -17,4 +17,4 @@ WITH CTE AS (
 SELECT
     *
 FROM
-    CTE
+    date_dimension
